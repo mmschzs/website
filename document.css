@@ -1,0 +1,308 @@
+
+
+/*图片滚动*/
+#bg{position: absolute;left: 420px; width: 60%;height: 360px;
+		}
+#bg img{width: 240px;height: 360px;}
+#sm{/*滚动对象样式*/
+		overflow:hidden;/*隐藏Div中多余的内容，增加图片会一起滚动*/
+		width: 100%;height: 360px;
+		margin:0 auto;
+		padding-top:30px;
+		}
+
+.video_JOKER{position: absolute;left: 200px;margin-top:;}
+.video_JOKER video{}
+.srollimg img{width: 240px;height: 360px;margin-left: 15px;}
+
+.contactbox{width: 512px;height: 360px;border: 1px solid black;border-radius: 15px;}
+.contactbox textarea{resize: none;}
+.contactbox td{width: 472px;border-radius: 15px;}
+.td1{width: 472px;height: 3em; border: 1px solid black;border-radius: 15px;background: gray;}
+.td2{width: 472px;height: 10em; border: 1px solid black;border-radius: 15px;background: gray;}
+
+/*图片的宽，高度应和img_ul中的li标签， 以及div#parent， div#uls的宽，高度一致。（还有#img_ul li img）
+img_ul的宽度应为(图片数目+1）*每张图片的宽度。也就是要多留出一张图片的宽度（下一部分解释）。(实测没必要)
+div uls部分使用overflow:hidden隐藏img_ul超出的部分，确保每次该区域只能显示一张完整的图片。*/
+#parent{
+    position: absolute;left: 100px;
+    margin: 30px auto;
+    padding: 0;
+    width: 240px;height: 360px;
+}
+
+#uls{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 240px;height: 360px;
+    overflow: hidden;
+}
+
+#img_ul{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    width: 3000px;           /*多留出一张图片的宽度！*/
+    list-style: none;
+}
+#img_ul li{
+    float: left;
+    margin: 0;
+    padding: 0;
+   	width: 240px;height: 360px;
+}
+#img_ul li img{
+    width: 240px;height: 360px;
+}
+
+#litCir_ul{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    right: 10px;
+    bottom: 10px;
+    list-style: none;
+}
+#litCir_ul li{
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%; 
+    margin-left:10px ;
+    cursor: pointer;
+}
+
+li.active{
+    background-color: white;
+}
+li.quiet{
+    background-color: #1e90ff;
+}
+
+#buttons{
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+#buttons span{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    margin-top: -20px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-family: Simsun;
+    font-size: 30px;
+    border: 1px solid #fff;
+    opacity: 0.3;
+    cursor: pointer;
+    color: #fff;
+    background: black;
+}
+#left{
+    left: 5px;
+}
+#right{
+    left: 100%;
+    margin-left: -45px;
+}
+
+.register input{
+		display: inline-block;
+		background: gray;
+	position: absolute;
+	left: 200px;
+	}
+	.xiao-container{
+		width: 100%;
+	}
+	.xiao-register-box{
+		position: relative;
+		height: 650px;
+		width: 500px;
+		margin: 0 auto;
+		background:gray;
+		border: 1px solid black;
+		border-radius: 15px
+	}
+.xiao-register-box input{background: gray;border: 1px solid black;border-radius: 15px;}
+	.xiao-title-box{
+		position: absolute;
+		width: 300px;
+		height: 50px;
+		margin-left: 150px;
+		margin-top: 5px;
+		text-align: center;
+		font-size: 28px;
+		font-weight: 800;
+		color: black;
+		line-height: 50px;
+	}
+	.xiao-username-box{
+		position: absolute;
+		width: 420px;
+		height: 40px;
+		line-height: 40px;
+		margin-top:100px;
+		margin-left:80px;
+		font-weight: 700;
+	}
+	.xiao-username-input{
+		display: inline-block;
+		margin-left: 28px;
+		/*background: green;*/
+	}
+	#username{
+		height: 35px;
+		width: 290px;
+		border: 1px solid black;
+		border-radius: 5px;
+	}
+	.xiao-userPassword-box{
+		position: absolute;
+		width: 420px;
+		height: 40px;
+		line-height: 40px;
+		margin-top:180px;
+		margin-left:80px;
+		font-weight: 700;
+	}
+	.xiao-userPassword-input{
+		display: inline-block;
+		margin-left: 28px;
+	}
+	#userPassword{
+		height: 35px;
+		width: 290px;
+		border: 1px solid black;
+		border-radius: 5px;
+	}
+	.xiao-userRePassword-box{
+		position: absolute;
+		width: 420px;
+		height: 40px;
+		line-height: 40px;
+		margin-top:260px;
+		margin-left:80px;
+		font-weight: 700;
+	}
+	.xiao-userRePassword-input{
+		display: inline-block;
+		margin-left: 28px;
+	}
+	#userRePassword{
+		height: 35px;
+		width: 290px;
+		border: 1px solid black;
+		border-radius: 5px;
+	}
+	.xiao-userPhone-box{
+		position: absolute;
+		width: 420px;
+		height: 40px;
+		line-height: 40px;
+		margin-top:340px;
+		margin-left:80px;
+		font-weight: 700;
+	}
+	.xiao-userPhone-input{
+		display: inline-block;
+		margin-left: 28px;
+	}
+	#userPhone{
+		height: 35px;
+		width: 290px;
+		border: 1px solid black;
+		border-radius: 5px;
+	}
+	.xiao-userEmail-box{
+		position: absolute;
+		width: 420px;
+		height: 40px;
+		line-height: 40px;
+		margin-top:420px;
+		margin-left:80px;
+		font-weight: 700;
+	}
+	.xiao-userEmail-input{
+		display: inline-block;
+		margin-left: 28px;
+	}
+	#userEmail{
+		height: 35px;
+		width: 290px;
+		border: 1px solid black;
+		border-radius: 5px;
+	}
+
+	.xiao-userGender-box
+{
+		position: absolute;
+		width: 420px;
+		height: 40px;
+		line-height: 40px;
+		margin-top:500px;
+		margin-left:82px;
+		font-weight: 700;
+	}
+	.xiao-userGender-input{
+		display: inline-block;
+		margin-left: 62px;
+	}
+	.xiao-require{
+		color: red;
+	}
+	.xiao-submit-box{
+		position:absolute;
+		width: 80px;
+		height: 40px;
+		line-height: 40px;
+		margin-top: 580px;
+		margin-left:200px;
+		border-radius: 5px;
+		background: grey;
+	}
+	#xiao-submit-button{
+		display: inline-block;
+		width: 80px;
+		height: 40px;
+		border-radius: 5px;
+		background: gray;
+	}
+#xiao-submit-button-2{
+		display: inline-block;
+		width: 80px;
+		height: 40px;
+		border-radius: 5px;
+		background: gray;
+	}
+
+	.xiao-goLogin-box{
+		position:absolute;
+		width: 80px;
+		height: 40px;
+		line-height: 40px;
+		margin-top: 580px;
+		margin-left:300px;
+		border-radius: 5px;
+		background: grey;
+
+	}
+#xiao-goLogin-button{
+		display: inline-block;
+		width: 80px;
+		height: 40px;
+		border-radius: 5px;
+		background: gray;
+	}
+
+

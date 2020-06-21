@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>未晞</title>
+	<link rel=icon type=image/x-icon href=icon-blue.png><!--头标-->
+	<script src="tomorrow.js">
+	</script>
+	<link rel="stylesheet" type="text/css" href="tomorrow.css"/>
+	
+	<style>
+	body, html{width:100%;height:100%;}
+	.cloud{position:absolute;top:0px;left:0px;width:100%;height:100%;background:url("could.png") no-repeat;z-index:1;opacity:0.8;}
+	#cloud2{z-index:3;}
+	</style>
+</head>
+
+<body>
+	<div class="top">
+                   <center> 
+                    <ul>
+                      <li><a href="index.html"><strong>无名之碑</strong></a> </li>
+                      <li><a href="oldtime.html"><strong>曩昔</strong></a>
+                        <ul>
+							  <li><a href="oldtime.html#JOKER"><div class="box"> <span class="f20">JOKER</span></div></a></li>
+							  <li><a href="oldtime.html#roller"><div class="box"> <span class="f20">蜷缩者</span></div></a></li>
+								<li><a href="oldtime.html#aGameForNoName"><div class="box"> <span class="f20">无门关</span></div></a></li>   
+						  </ul>
+						  
+						</li>
+					<li><a href="now.html"><b>今夕</b></a>
+						<ul>
+							<li><a href="now.html#metal"><div class="box"> <span class="f20">金属</span></div></a></li>
+							<li><a href="now.html#deathformyself"><div class="box"> <span class="f20">我给我的死</span></div></a></li>
+							<li><a href="now.html#talk"><div class="box"> <span class="f20">谈谈</span></div></a></li>
+                        </ul>
+						</li>
+                    <li>
+                        <a href="tomorrow.html"><b>未晞</b></a>
+						<ul>
+							<li><a href="tomorrow.html#sun"><div class="box"> <span class="f20">太阳</span></div></a></li>
+						</ul>
+                    </li>
+						<li>
+                        <a href="document.html"><b>后记</b></a>
+						<ul>
+							<li><a href="document.html#contact"><div class="box"> <span class="f20">联系</span></div></a></li>
+						</ul>
+							<ul>
+							<li><a href="document.html#paintingroom"><div class="box"> <span class="f20">画室</span></div></a></li>
+						</ul>
+                    </li>
+                      </ul>
+                    </center>      
+            </div>
+	<div class="content">
+		<div class=topbottom></div>
+		<section class="showbox" style="height: 400px">
+		<div class="iconbox" style="float: left;margin-left: 100px;margin-top: -100px;">
+			<img src="icon-blue-ps.png" alt="">
+		</div>
+		<div class="textbox" style="position: absolute;left: 400px;margin-top:;">
+			<center><font size="+5">未晞</font>
+				<br>东方未晞。——《诗·齐风·东方未明》
+			</center>
+		</div>
+		</section>
+		
+		
+		<section class="showbox" style="height: 400px">
+			
+			<div class="textbox" style="float: left;">
+				<center><a href="" name="sun"><font size=+2 color="blue"><b>太阳</b></font></a>
+					<p>
+				All after, tomorrow is another day.--《乱世佳人》
+			</p>
+			</center>
+			
+				
+		</div>
+			
+		<div class="imgbox" style="position: absolute;left: 1000px;margin-top:;">
+			<img src="sun.png" alt="">
+		</div>
+		
+		</section>
+		
+	</div>
+	<div id="mainBody">
+	    <div id="cloud1" class="cloud"></div>
+	    <div id="cloud2" class="cloud"></div>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	// Cloud Float...
+		$(function(){
+			var timer = null;
+			var offset1 = 450;	//动画一的初始位置
+			var offset2 = 0;	//动画二的初始位置
+
+			var $body = $('body');
+			var $main = $('#mainBody');
+			var $mainW = $main.outerWidth();
+			var $cloud1 = $('#cloud1');
+			var $cloud2 = $('#cloud2');
+
+			$body.hover(function(){
+				// 判断是否有定时器
+				if(timer){
+					clearInterval(timer);
+				}
+			},function(){
+				timer = setInterval(function(){
+					// 极界判断
+					if(offset1 >= $mainW){
+						offset1 = -580;
+					}
+					if(offset2 >= $mainW){
+						offset2 = -580;
+					}
+
+					// 物体加速度
+					offset1 += 1.1;
+					offset2 += 1;
+					// 位置重定位
+					$cloud1.css({"background-position": offset1 + 'px 60px'});
+					$cloud2.css({"background-position": offset2 + 'px 340px'});
+				},70);
+			}).trigger('mouseleave');
+		});
+	</script>
+<!--页脚-->
+			<footer class="color-black" > 
+    			<center><font color="blue">Copyright ©未生</font></center>
+			</footer>
+			 
+</body>
+</html>

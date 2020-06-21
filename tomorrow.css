@@ -1,0 +1,106 @@
+@charset "utf-8";
+/* CSS Document */
+
+font{color: blue;}
+a{color: skyblue;text-decoration: none;}
+body{background:skyblue ;color: blue;}
+footer{  
+	background:rgba(74,188,235,1.00); border-top:1px color #999(78, 78, 78); 
+	padding:10px 0 30px 0px;
+    width: 100%;left: 0; /*展开footer宽度*/
+	margin-top: 15px;
+}  /* HTML5布局样式 直接对footer元素设置样式 */
+
+.topbottom{height: 80px;width: auto;}
+.content{width: auto;height: auto;}
+section{
+	width: 100%;
+	margin: 0 auto;
+	border-bottom: 1px solid blue;
+}
+
+.iconbox{width: 527px;height: 527px;}
+.video_JOKER{position: absolute;left: 200px;margin-top:;}
+.video_JOKER video{}
+
+.showbox{width: auto;height: 400px;position: relative;left: 0px;right: 80px; z-index: -1;margin-top: 15px;}
+.imgbox{width: 240px;height: 360px; }
+.imgbox img{width: 240px;height: 360px;border: }
+.textbox{width: 1000px; height: 360px;}
+
+.box{ font-size:20px} 
+.box.f20{ font-size:10px} /*字体大小*/
+.top{
+    /* 设置宽度高度背景颜色 */
+    height: auto; /*高度改为自动高度*/
+    width:100%;
+    margin-left: 0;
+    background:rgba(74,188,235,0.8);
+
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px); /*毛玻璃*/
+
+    position: fixed; /*固定在顶部*/
+    top: 0;/*离顶部的距离为0*/
+    left:0;
+    margin-bottom: 5px;
+	z-index: 99;
+}
+.top ul{
+    /* 清除ul标签的默认样式 */
+    width: auto;/*宽度也改为自动*/
+    list-style-type: none;
+    white-space:nowrap;
+    overflow: hidden;
+    margin-left: 5%;
+    /* margin-top: 0;          */
+    display: flex;
+            /*flex-direction: row;*/
+            /*flex-wrap: nowrap;*/
+            flex-flow: row nowrap;
+            justify-content: center;
+    /*不知道*/
+    padding: 0;
+
+}
+.top li {
+    /* 设置一级菜单 */
+    float:left; /* 使li内容横向浮动，即横向排列  */
+    margin-right:5%;  /* 两个li之间的距离*/
+    position: relative;
+    overflow: hidden;
+}
+
+.top li a{
+   /* 设置链接内容显示的格式*/
+    display: block; /* 把链接显示为块元素可使整个链接区域可点击 */
+    color:blue;
+    text-align: center;
+    padding: 3px;
+    overflow: hidden;
+    text-decoration: none; /* 去除下划线 */
+    
+}
+.top li a:hover{
+    /* 鼠标选中时背景变为白色 */
+    color: white;
+}
+.top ul li ul{
+    /* 设置二级菜单 */
+    margin-left: -0.2px;
+    
+    position: relative;
+    display: none; /* 默认隐藏二级菜单的内容 */
+
+}
+.top ul li ul li{
+    /* 二级菜单li内容的显示 */
+    
+    float:none;
+    text-align: center;
+}
+.top ul li:hover ul{
+    /* 鼠标选中二级菜单内容时 */
+    display: block;/* 把链接显示为块元素可使整个链接区域可点击 */
+    
+}

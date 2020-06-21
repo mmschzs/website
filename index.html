@@ -1,0 +1,102 @@
+<html>
+    <head>
+            
+                <meta charset="utf-8" />
+                <title>无名之碑</title>
+                <link rel=icon type=image/x-icon href=icon-black.png><!--头标-->
+
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+        <script src="background.js"></script>
+        <script src="index.js"></script>
+		<script>
+			 $('#full').click(function() {
+      var ele = document.documentElement;
+      var SCREEN_FULL_TEXT = "全屏";
+      var SCREEN_REST_TEXT = "退出全屏";
+      var SCREEN_FULL = 'screen-full';
+      var SCREEN_REST = 'screen-restore';
+      var iconElem = $(this);
+      if (iconElem.hasClass(SCREEN_FULL)) {
+          var reqFullScreen = ele.requestFullScreen || ele.webkitRequestFullScreen || ele.mozRequestFullScreen || ele.msRequestFullscreen;
+          if (typeof reqFullScreen !== 'undefined' && reqFullScreen) {
+              reqFullScreen.call(ele);
+          };
+          iconElem.addClass(SCREEN_REST).removeClass(SCREEN_FULL);
+          iconElem.text(SCREEN_REST_TEXT);
+      } else {
+          if (document.exitFullscreen) {
+              document.exitFullscreen();
+          } else if (document.mozCancelFullScreen) {
+              document.mozCancelFullScreen();
+          } else if (document.webkitCancelFullScreen) {
+              document.webkitCancelFullScreen();
+          } else if (document.msExitFullscreen) {
+              document.msExitFullscreen();
+          }
+          iconElem.addClass(SCREEN_FULL).removeClass(SCREEN_REST);
+          iconElem.text(SCREEN_FULL_TEXT);
+      }
+  });
+			
+			function changeGraveStoneFront(){
+document.getElementById('graveStoneFront').src="greencode.png"  ;
+}
+		</script>
+	</head>
+	<canvas id="mom" 
+					style="position:absolute;top: 0;right: 0;bottom: :0;left: 0; z-index:-2;background:#111;">
+				 
+			</canvas>
+        <body>
+			<div class="container">
+			
+            
+        	<div class="top">
+                   <center> 
+                    <ul>
+                      <li><a href="index.html"><strong>无名之碑</strong></a> </li>
+                      <li><a href="oldtime.html"><strong>曩昔</strong></a>
+                        <ul>
+							  <li><a href="oldtime.html#JOKER"><div class="box"> <span class="f20">JOKER</span></div></a></li>
+							  <li><a href="oldtime.html#roller"><div class="box"> <span class="f20">蜷缩者</span></div></a></li>
+								<li></li>   
+						  </ul>
+						  
+						</li>
+					<li><a href="now.html"><b>今夕</b></a>
+						<ul>
+							<li><a href="now.html#metal"><div class="box"> <span class="f20">金属</span></div></a></li>
+							<li><a href="now.html#deathformyself"><div class="box"> <span class="f20">我给我的死</span></div></a></li>
+							<li><a href="now.html#talk"><div class="box"> <span class="f20">谈谈</span></div></a></li>
+                        </ul>
+						</li>
+                    <li>
+                        <a href="tomorrow.html"><b>未晞</b></a>
+						<ul>
+							<li><a href="tomorrow.html#sun"><div class="box"> <span class="f20">太阳</span></div></a></li>
+						</ul>
+                    </li>
+						<li>
+                        <a href="document.html"><b>后记</b></a>
+						<ul>
+							<li><a href="document.html#contact"><div class="box"> <span class="f20">联系</span></div></a></li>
+						</ul>
+							<ul>
+							<li><a href="document.html#paintingroom"><div class="box"> <span class="f20">画室</span></div></a></li>
+						</ul>
+                    </li>
+                      </ul>
+                    </center>      
+            </div>
+			
+			<div class="graveStoneBox">
+				<img  src="outdoor.png" alt="" id="graveStoneFront" onClick="changeGraveStoneFront()">
+	</div>
+			
+			<!--页脚-->
+			<footer class="color-black" > 
+    			<center>Copyright ©未生</center>
+			</footer> 
+			</div>
+		</body>
+			

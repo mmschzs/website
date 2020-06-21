@@ -1,0 +1,328 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>后记</title>
+	<link rel=icon type=image/x-icon href=icon-black.png><!--头标-->
+	<script src="document.js">
+	
+	</script>
+	<script src="background-document.js">
+	</script>
+	<script>
+		function contactFeedback(){
+    window.alert("提交成功");return;
+							}
+		function register(){
+	var username=document.getElementById("username").value;//获取值
+	var userPassword=document.getElementById("userPassword").value;//获取值
+	var userRePassword=document.getElementById("userRePassword").value;//获取值
+	var userPhone=document.getElementById("userPhone").value;//获取值
+	var userEmail=document.getElementById("userEmail").value;//获取值
+	var userGender=document.getElementsByName("userGender").value;//获取值
+	if (username == ""||userPassword ==""||userRePassword ==""||userPhone ==""||userEmail ==""||userGender ==""){
+                window.alert("游客姓名，密码，确认密码，手机号码，电子邮箱，性别缺一不可!");return ;
+                //return false;
+            }
+	else{
+				window.alert("注册成功");return ;
+	 		}
+	
+}
+
+function login(){
+	var username=document.getElementById("username").value;//获取值
+	var userPassword=document.getElementById("userPassword").value;//获取值
+	var userRePassword=document.getElementById("userRePassword").value;//获取值
+	var userPhone=document.getElementById("userPhone").value;//获取值
+	var userEmail=document.getElementById("userEmail").value;//获取值
+	var userGender=document.getElementsByName("userGender").value;//获取值
+	if (username == ""||userPassword ==""||userRePassword ==""||userPhone ==""||userEmail ==""||userGender ==""){
+                window.alert("游客姓名，密码，确认密码，手机号码，电子邮箱，性别缺一不可!");return ;
+                //return false;
+            }
+	else{
+				window.alert("登陆成功");
+	 		}
+	
+}
+	</script>
+	<link rel="stylesheet" type="text/css" href="document.css"/>
+	<link rel="stylesheet" type="text/css" href="share.css"/>
+	
+</head>
+
+	<canvas id="mom" 
+					style="position:absolute;top: 0;right: 0;bottom: :0;left: 0; z-index:-2;background:#111;">
+				 
+			</canvas>
+
+<body id="body">
+	<div class="top">
+                   <center> 
+                    <ul>
+                      <li><a href="index.html"><strong>无名之碑</strong></a> </li>
+                      <li><a href="oldtime.html"><strong>曩昔</strong></a>
+                        <ul>
+							  <li><a href="oldtime.html#JOKER"><div class="box"> <span class="f20">JOKER</span></div></a></li>
+							  <li><a href="oldtime.html#roller"><div class="box"> <span class="f20">蜷缩者</span></div></a></li>
+								<li><a href="oldtime.html#aGameForNoName"><div class="box"> <span class="f20">无门关</span></div></a></li>   
+						  </ul>
+						  
+						</li>
+					<li><a href="now.html"><b>今夕</b></a>
+						<ul>
+							<li><a href="now.html#metal"><div class="box"> <span class="f20">金属</span></div></a></li>
+							<li><a href="now.html#deathformyself"><div class="box"> <span class="f20">我给我的死</span></div></a></li>
+							<li><a href="now.html#talk"><div class="box"> <span class="f20">谈谈</span></div></a></li>
+                        </ul>
+						</li>
+                    <li>
+                        <a href="tomorrow.html"><b>未晞</b></a>
+						<ul>
+							<li><a href="tomorrow.html#sun"><div class="box"> <span class="f20">太阳</span></div></a></li>
+						</ul>
+                    </li>
+						<li>
+                        <a href="document.html"><b>后记</b></a>
+						<ul>
+							<li><a href="document.html#contact"><div class="box"> <span class="f20">联系</span></div></a></li>
+						</ul>
+							<ul>
+							<li><a href="document.html#paintingroom"><div class="box"> <span class="f20">画室</span></div></a></li>
+						</ul>
+                    </li>
+                      </ul>
+                    </center>      
+            </div>
+		<div class="content">
+		<div class=topbottom></div>
+		<div class=section class="showbox" style="height: 400px">
+		<div class="imgbox" style="float: left;margin-left: 100px;">
+			<img src="outdoor.png" alt="">
+		</div>
+		<div class="textbox" style="position: absolute;left: 500px;margin-top:;">
+			<center><font size="+5">后记</font></center>
+			<br><center>仅以此碑渡此悲。</center>
+		</div>
+			
+		</div>
+		
+		
+		
+			
+		<div class=section class="showbox" style="height:780px; ">
+			<div class="registerbox" style="position: absolute;left: 100px;">
+		<div class="xiao-container">
+			<div class="xiao-register-box">
+				<div class="xiao-title-box">
+				<span>欢迎</span>
+				</div>
+				<form action="#" method="post" >
+				<div class="xiao-username-box">
+					<span class="xiao-require">*</span>
+					<label for="username">游客姓名  </label><br>
+					<div class="xiao-username-input">
+						<input class="" type="text" id="username" name="username" placeholder="请输入姓名 长度:6-12个字符" />
+					</div>
+				</div>
+
+				<div class="xiao-userPassword-box">
+					<span class="xiao-require">*</span>
+					<label for="userPassword">密码  </label><br>
+					<div class="xiao-userPassword-input">
+						<input type="password" id="userPassword" name="userPassword" placeholder="请输入密码 长度:6-12个字符" />
+					</div>
+				</div>
+
+				<div class="xiao-userRePassword-box">
+				<span class="xiao-require">*</span>
+						<label for="userRePassword">确认密码</label><br>
+					<div class="xiao-userRePassword-input">
+						<input type="password" id="userRePassword" name="userRePassword" placeholder="请重复输入密码" />
+					</div>
+				</div>
+
+				<div class="xiao-userPhone-box">
+					<span class="xiao-require">*</span>
+					<label for="userPhone">手机号码</label><br>
+					<div class="xiao-userPhone-input">
+						<input type="text" id="userPhone" name="userPhone" placeholder="请输入您的手机号码，11位有效数字" />
+					</div>
+				</div>
+				
+				<div class="xiao-userEmail-box">
+					<span class="xiao-require">*</span>
+					<label for="userEmail">电子邮箱 </label><br>
+					<div class="xiao-userEmail-input">
+						<input type="text" id="userEmail" name="userEmail" placeholder="请输入您的邮箱地址，如：123@qq.com" />
+					</div>
+				</div>
+					
+				<div class="xiao-userGender-box">
+					<span class="xiao-require">*</span>
+					<label for="userGender">性别</label><br>
+					<div class="xiao-userGender-input">
+						<input type="radio" id="userGender_01" name="userGender" value="1" checked="checked" />男   
+						<input type="radio" id="userGender_02" name="userGender" value="2" />女
+						<input type="radio" id="userGender_03" name="userGender" value="3" />其它
+					</div>
+				</div>
+				
+				<div class="xiao-submit-box">
+					<input id = "xiao-submit-button" type="submit" value="注册"  onClick = "register()">
+				</div>
+				
+				<div class="xiao-goLogin-box"><input id = "xiao-submit-button-2" type="submit" value="登录"  onClick = "login()">
+				</div>
+					
+				</form>
+			</div>
+		</div>
+			</div>
+		<div class="contactbox" style="position: absolute;left: 630px;">
+				<center>
+			  <strong><font size="+2"><a name="contact">联系</a></font></strong>
+				<br>
+				<form action="#" method="post" >
+				<table style="margin-top: 50px;z-index: 2">
+					<tr >
+						<td  ><textarea class="td1" name="email" id="" cols="30" rows="10">邮箱</textarea></td>
+					</tr>
+					<tr >
+						<td  ><textarea class="td1" name="topic" id="" cols="30" rows="10">主题</textarea></td>
+					</tr>
+					<tr >
+						<td  ><textarea class="td2" name="text" id="" cols="30" rows="10">内容</textarea></td>
+					</tr>
+					<tr>
+						<td><center><input id = "contactFeedback-submit-button" type="submit" value="提交"  onClick = "contactFeedback()">
+						</td></center>
+						
+					</tr>
+				</table>
+				</form>
+					</center>
+			</div>	
+			
+		<div class="imgbox" style="position: absolute;left: 850px;margin-top:  400px ">
+			<img src="contact.png" alt="">
+		</div>
+		</div>
+			
+		<div class=section class="showbox" style="height: 450px;">
+			<center>
+			  <strong><font size="+2"><a name="paintingroom">画室</a></font></strong>
+			</center>
+			
+			<div id= "parent">
+        <div id="uls">
+            <ul id="img_ul">
+									<li><img src="black.png" alt=""></li>
+									<li><img src="outdoor.png" alt=""></li>
+									<li><img src="deathformyself.png" alt=""></li>
+									<li><img src="joker.png" alt=""></li>
+									<li><img src="metal.png" alt=""></li>
+									<li><img src="roller.png" alt=""></li>
+									<li><img src="sun.png" alt=""></li>
+									<li><img src="angel.png" alt=""></li>
+									<li><img src="8.png" alt=""></li>
+            </ul>
+            <ul id='litCir_ul'></ul>
+        </div>
+        <div id="buttons">
+            <span id="left">&lt;</span>
+            <span id="right">&gt;</span>
+        </div>
+    	</div>
+			
+			<div id="bg">
+		<div id="sm">	<!--滚动div-->
+				<table>		<!--外表格1x2,且第2单元格是空的-->
+					<tr>
+						<td id="Pic1">
+							<table>	<!--内表格1x9,存放9张图片-->
+								<tr>
+									<td><img src="black.png" alt=""></td>
+									<td><img src="outdoor.png" alt=""></td>
+									<td><img src="deathformyself.png" alt=""></td>
+									<td><img src="joker.png" alt=""></td>
+									<td><img src="metal.png" alt=""></td>
+									<td><img src="roller.png" alt=""></td>
+									<td><img src="sun.png" alt=""></td>
+									<td><img src="angel.png" alt=""></td>
+									<td><img src="8.png" alt=""></td>
+									
+									
+							    </tr>
+						   </table>
+					   </td>
+					<td id="Pic2"></td>
+				    </tr>
+				</table>
+		</div>
+	</div>
+	<!--
+	<div class=srollimg>
+		<marquee behavior="sroll" direction="" onMouseOver="stop()" onMouseOut="start()" loop="infinite" >
+			<ul>
+				<img src="black.png" alt="">
+				<img src="outdoor.png" alt="">
+				<img src="deathformyself.png" alt="">
+				<img src="joker.png" alt="">
+				
+				<img src="metal.png" alt="">
+				<img src="roller.png" alt="">
+				<img src="sun.png" alt="">
+			</ul>
+		</marquee>
+	</div>
+		-->
+		</div>	
+		
+		
+		
+		
+		
+	</div>
+	
+<!--页脚-->
+			<footer class="color-black" > 
+    			<center>Copyright ©未生</center>
+			</footer>
+			 
+	<!--下面内容的客户端脚本不可放置在页面头部-->
+	<!--图片滚动-->
+<script>
+	Pic2.innerHTML=Pic1.innerHTML;//复制一组图片，但被隐藏
+	function scrolltoleft(){//定义向左移动的方法
+		sm.scrollLeft++;//改变层的水平坐标，实现向左移动
+		if(sm.scrollLeft>=Pic1.scrollWidth)//需要复位
+			sm.scrollLeft=0;//层的位置复位，浏览器窗口的宽度有限的
+	}
+	
+	var MyMar=setInterval(scrolltoleft,20); //定时器，方法名后不可加()
+	
+	function mouseover(x){//放大图片
+		x.style.width="210";
+		x.style.height="256"
+		x.style.cursor="pointer"
+	}
+	function mouseout(x){//图片复原
+		x.style.width="105";
+		x.style.height="128"
+	}
+
+	//两面两行是用方法响应对象的事件
+	sm.onmouseover=function(){//匿名方法（函数）
+		clearInterval(MyMar);//停止滚动
+	}
+	
+	sm.onmouseout=function(){
+		MyMar = setInterval(scrolltoleft,20);//继续滚动
+	}
+	
+
+</script>	
+</body>
+</html>
